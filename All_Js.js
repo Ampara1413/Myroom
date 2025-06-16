@@ -1,32 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const searchInput = document.getElementById('searchInput');
-  const nameList = document.querySelectorAll('.Name');
+  const searchButton = document.getElementById("searchButton");
+  const searchInput = document.getElementById("searchInput");
 
-  searchInput.addEventListener('input', function () {
-    const filter = this.value.toLowerCase().trim();
-    const searchWords = filter.split(/\s+/);
-
-    nameList.forEach(item => {
-      const text = item.textContent.toLowerCase();
-      const isMatch = searchWords.every(word => text.includes(word));
-      item.style.display = isMatch ? 'block' : 'none';
-    });
+  searchButton.addEventListener("click", function () {
+    const keyword = searchInput.value.trim();
+    if (keyword) {
+      alert("คุณค้นหาคำว่า: " + keyword);
+    } else {
+      alert("กรุณากรอกคำค้นหาก่อน");
+    }
   });
 });
 
- const colors = [
-    "#a8dadc", // ฟ้าอ่อน
-    "#f1faee", // ขาวครีม
-    "#ffe5d9", // ส้มอ่อน
-    "#cce3de", // เขียวอ่อน
-    "#f0efeb"  // เทาอ่อน
-  ];
-  let index = 0;
+function search() {
+  const keyword = document.getElementById('searchInput').value.toLowerCase().trim();
+  const names = document.querySelectorAll('.Name');
 
-  function changeColor() {
-    document.body.style.backgroundColor = colors[index];
-    index = (index + 1) % colors.length;
-  }
+  names.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    if (text.includes(keyword)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
 
-  setInterval(changeColor, 2500); // เปลี่ยนสีทุก 2.5 วินาที
-  changeColor(); // เรียกตอนโหลดหน้า
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  const names = document.querySelectorAll('.Name');
+  names.forEach(item => {
+    item.style.display = "block";
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const input = document.getElementById('searchInput');
+  input.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+      search();
+    }
+  });
+});

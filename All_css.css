@@ -8,7 +8,7 @@
 .Name
 {
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
   font-weight: 700;
   opacity: 0;
   transform: translateY(20px);
@@ -33,23 +33,19 @@
     margin: 0 auto;
     width: 55%; /* หรือขนาดที่ต้องการ */
     text-align: center;
-    color: white;
+    color: rgb(255, 252, 49);
     font-size: 50px;
     padding: 50px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     display: flex;
-    transition: 0.4s;
-    text-shadow: #007BFF;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(0, 51, 255);
     border: 2px solid blue;
     border-radius: 10px;
     background-color: rgba(161, 158, 255, 0.5);
-    transition: transform 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-      user-select: none;
+    user-select: none;
+    text-shadow:0 0 10px rgb(255, 255, 255);
 }
 .Set
 {
@@ -74,13 +70,18 @@
       transform: scale(1.3);
       color: #000000; /* สีทองตอน hover */
       text-shadow: 0 0 10px #007bff;
-      transform: scale(1.3);
-      
+      transform: scale(1);
+}
+.Set:hover{
+  color: #ffffff;
+  transform: scale(1.2);
+  text-shadow:0 0 10px #000000;
+  background-color: rgb(0, 255, 255);
 }
 .Header{
     font-size: 20px;
-    color: black;
-    background-color: white;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     border-bottom: 10px solid #bcc4cc;   /* ขอบล่างแถบ */
     padding: 15px 20px;                  /* ช่องว่างบนล่างซ้ายขวา */
     width: 100%;                        /* กว้างเต็มหน้าจอ */
@@ -92,6 +93,15 @@
     z-index: 999;                      /* อยู่บนสุด */
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+    text-shadow:0 0 10px white;
+}
+.Header:hover{
+  color: rgb(255, 236, 64);
+  text-shadow: 0 0 30px rgb(255, 255, 255);
+  font-size: 25px;
+  transition: 0.4s;
+  box-shadow: 0 0 30px yellow;
+  border-bottom: 10px solid white;
 }
 .bodyName{
   /* ไล่สีจากบนลงล่าง (top to bottom) */
