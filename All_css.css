@@ -243,3 +243,17 @@ input#searchInput {
       display: flex;
       padding: 60px;
     }
+
+    .button{
+      color:rgb(0, 0, 0);
+      text-shadow:0 0 10px #000000;
+      font-size: 18px;
+      border-radius: 8px;  /* มุมโค้ง */
+      padding: 18px;
+    }
+    .button :hover{
+    font-size: 20px;
+    transition: 0.4s;
+    border-bottom: 10px solid white;
+    cursor: pointer;
+    }
