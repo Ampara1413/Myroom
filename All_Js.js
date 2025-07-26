@@ -42,3 +42,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+
+
+  const images = ["Gifted.png", "Gifted2.png", "Gifted3.png"];
+  let currentIndex = 0;
+
+  function changeBackground() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.body.style.backgroundImage = `url(${images[currentIndex]})`;
+  }
+
+  // ตั้งค่าพื้นหลังเริ่มต้น
+  document.body.style.backgroundImage = `url(${images[0]})`;
+
+  setInterval(changeBackground, 2000);

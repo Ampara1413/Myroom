@@ -1,9 +1,10 @@
 .body
 {
-  background-color: rgb(0, 0, 0);
-  background-size: cover;  
-    font-family: Arial, Helvetica, sans-serif;
-    
+   
+ background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
 }
 .Name
 {
@@ -136,7 +137,7 @@ input#searchInput {
   width: 500px; 
 }
 .bodyActivity{
-    background-color: #ffffff;
+    background-color: #edda00;
 }
 .Photo {
       margin: 0; padding: 0; height: 100vh;
@@ -213,6 +214,7 @@ input#searchInput {
       z-index: 1000;
       padding: 0 16px;
       text-shadow: 0 0 24px rgb(255, 0, 200);
+      
     }
 
     .HeaderIndex h1 {
