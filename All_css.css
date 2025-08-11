@@ -243,7 +243,9 @@ input#searchInput {
 
     .center{
       display: flex;
-      padding: 60px;
+  justify-content: center; 
+  align-items: center;    
+  padding: 60px;
     }
 
     .button{
